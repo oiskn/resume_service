@@ -16,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 import static com.example.resume_service.controller.util.UniformResourceLocatorUtils.*;
 
 @RestController
-@RequestMapping(value = "/image")
 @AllArgsConstructor
 public class ImageRestController {
 
