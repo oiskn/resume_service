@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="2021-11-11-resume" author="Orkhan">
+        <createTable remarks="Resume table" tableName="resume">
+            <column name="id" autoIncrement="true" type="bigint">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="first_name" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="bigint"/>
+            <column name="education" type="text"/>
+            <column name="experience" type="text"/>
+            <column name="skills" type="text"/>
+            <column name="about" type="text"/>
+            <column name="user_id" type="bigint">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column remarks="Resume visibility" name="visibility" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
